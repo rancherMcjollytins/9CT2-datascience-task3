@@ -18,3 +18,11 @@
 2. Data Cleansing
 
     The  data cleansing process should be able to recognize and correct issues such as missing values. This should be done based on patterns and trends. Additionally, The program should employ the use of statistical mathematics, including mean, median and mode.
+
+3. Visual Information Clarity
+
+    After processing, information should be displayed in a clear, visual manner (using pandas and matplotlib). The information should be well-layed out, as well as understandable with minimal pre-known knowledge/context. Additionally, essential context should be displayed in all data visualisations.
+
+#### **Non-Functional Requirements**
+
+1. 
