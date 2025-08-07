@@ -25,4 +25,10 @@
 
 #### **Non-Functional Requirements**
 
-1. 
+1. Data Efficiency
+
+    The data transmission process between different systems and/or platforms should be efficient, functioning fast, while managing resources. 
+
+2. Data Security
+
+    Data security is important during the storing of data and transmission of data. It is important that data storage is protected from malicious attacks and/or changes and invalid data from other parties. Transmission encryption is important to ensure data privacy is regulated.
