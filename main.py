@@ -1,4 +1,5 @@
 import time
+from data_module import (display_rawdata, )
 
 def main_menu():
     while True:
@@ -11,7 +12,7 @@ def main_menu():
         print()
         MenuInput = input("Choose an option by inputting a number between 1 - 4.  ")
         if MenuInput == "1":
-            print("dataset go here")
+            display_rawdata()
             print()
             time.sleep(1)
         elif MenuInput == "2":
@@ -26,7 +27,7 @@ def main_menu():
             print("bye bye see you next time")
             break
         else:
-            print("I said a number from 1 to 4 do digit form this time")
+            print("Invalid digit, please put a number from 1 - 4.")
             print()
             time.sleep(1)
 
