@@ -1,5 +1,5 @@
 import time
-from data_module import (display_rawdata, )
+from data_module import (display_rawdata, filter_data,)
 
 def main_menu():
     while True:
@@ -20,7 +20,7 @@ def main_menu():
             print()
             time.sleep(1)
         elif MenuInput == "3":
-            print("we filter here")
+            filter_data()
             print()
             time.sleep(1)
         elif MenuInput == "4":
