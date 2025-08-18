@@ -20,6 +20,7 @@ def main_menu():
             print()
             time.sleep(1)
         elif MenuInput == "3":
+            print()
             filter_data()
             print()
             time.sleep(1)
@@ -31,5 +32,5 @@ def main_menu():
             print()
             time.sleep(1)
 
-if __name__ == "main":
+if __name__ == "__main__":
     main_menu()
