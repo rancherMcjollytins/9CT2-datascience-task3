@@ -31,5 +31,5 @@ def main_menu():
             print()
             time.sleep(1)
 
-
-main_menu()
+if __name__ == "main":
+    main_menu()
