@@ -1,5 +1,5 @@
 import time
-from data_module import (display_rawdata, filter_data,)
+from data_module import (display_rawdata, filter_data, visualise_data)
 
 def main_menu():
     while True:
@@ -16,7 +16,7 @@ def main_menu():
             print()
             time.sleep(1)
         elif MenuInput == "2":
-            print("imagine a cool graph and stuff here")
+            visualise_data()
             print()
             time.sleep(1)
         elif MenuInput == "3":
