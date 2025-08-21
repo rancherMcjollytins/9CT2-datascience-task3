@@ -19,6 +19,7 @@ def visualise_data():
     for i in crimelist:
         print(i)
     print("Back\n")
+    #ugly disgusting hardcoding that i could have made nicer using tips and help (the way i did with the filtering)
     visChoice = input("Please Choose a crime to visualise (1-7): ").strip()
     if visChoice == "1":
         rawdata.plot(kind="line",x='Year',y=['Murder'], color=['red'],alpha=1,title='Central Coast Murder Rates Over Years')
@@ -43,8 +44,10 @@ def visualise_data():
         pass
     else:
         print("Please choose a number from 1 to 7!")
+        input("Input any key to continue!")
 
-def filter_data():
+def filter_data(selectioncrime, selectiontimeframe):
+    yearChoiceFiltering = None
     print("=== Data Filtering ===")
     print("1. Filter Via Crime")
     print("2. Filter Via Timeframe")
@@ -55,15 +58,30 @@ def filter_data():
         for i in crimelist:
             print(f"Crime: {i}")
         print()
-        crimeChoiceFiltering = input("Choose a crime to filter by (1-6): ")
-        if crimeChoiceFiltering == "1":
-            print(rawdata.loc[:,["Murder","Year"]])
-            
-
-
+        crimeChoiceFiltering = int(input("Choose a crime to filter or search for (1-6): "))
+        #checks to make sure that your input is in the range of 1 - 6 and is not 0
+        if crimeChoiceFiltering <= len(crimelist) and crimeChoiceFiltering != 0:
+            #-1 from crime choice filtering because python uses a zero index (starts from zero), I forgot this until it didnt work right
+            selectioncrime = crimelist[crimeChoiceFiltering - 1]
+            print(rawdata[["Year",selectioncrime]])
+            input("Input any key to continue!")
+        else:
+            print("Invalid choice!")
+            input("Input any key to continue!")
 
     elif filterChoice == "2":
-        pass
+        for timespan in rawdata["Year"]:
+            print(f"[{timespan}]")
+        yearChoiceFiltering = int(input("\nPlease choose a year to filter by (1 - 10): "))
+        if yearChoiceFiltering != 0 and yearChoiceFiltering <= len(rawdata["Year"]):
+            #though done a bit differently, once again, yearchoicefiltering is your input, the selection
+            # is simply the position of the int you inputted in the yearchoicefiltering - 1 for python reasons.
+            selectiontimeframe = rawdata.iloc[yearChoiceFiltering - 1,:]
+            print(f"\n{selectiontimeframe}")
+            input("Input any key to continue!")
+        else:
+            print("Invalid choice!")
+            input("Input any key to continue!")
 
 
 

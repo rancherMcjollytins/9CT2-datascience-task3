@@ -1,5 +1,5 @@
 import time
-from data_module import (display_rawdata, filter_data, visualise_data)
+from data_module import (display_rawdata, filter_data, visualise_data,crimelist)
 
 def main_menu():
     while True:
@@ -19,11 +19,13 @@ def main_menu():
             print()
         elif MenuInput == "3":
             print()
-            filter_data()
+            filter_data(None, None)
             print()
         elif MenuInput == "4":
             print("bye bye see you next time")
             break
+        elif MenuInput == "test":
+            print(len(crimelist))
         else:
             print("Invalid digit, please put a number from 1 - 4.")
             input("Input any key to continue!")
