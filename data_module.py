@@ -69,6 +69,10 @@ def filter_data(selectioncrime, selectiontimeframe):
             print("Invalid choice!")
             input("Input any key to continue!")
 
+
+
+            
+
     elif filterChoice == "2":
         for timespan in rawdata["Year"]:
             print(f"[{timespan}]")
