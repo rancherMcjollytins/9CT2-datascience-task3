@@ -9,8 +9,9 @@ visChoice = None
 
 
 def display_rawdata():
-    print("=== Displaying Raw Dataset ===\n === Rates of different crime in the Central Coast ===")
+    print("=== Displaying Raw Dataset ===\n=== Rates of different crime in the Central Coast ===\n")
     print(rawdata)
+    input("Input any key to continue!")
 
 def visualise_data():
     print("=== Data Visualiser ===")
@@ -54,8 +55,10 @@ def filter_data():
         for i in crimelist:
             print(f"Crime: {i}")
         print()
-        crimeChoiceFiltering = int(input("Choose a crime to filter by (1-6): "))
-
+        crimeChoiceFiltering = input("Choose a crime to filter by (1-6): ")
+        if crimeChoiceFiltering == "1":
+            print(rawdata.loc[:,["Murder","Year"]])
+            
 
 
 

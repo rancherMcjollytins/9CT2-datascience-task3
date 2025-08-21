@@ -24,12 +24,9 @@ def main_menu():
         elif MenuInput == "4":
             print("bye bye see you next time")
             break
-        elif MenuInput == "you suck":
-            print("man that wasnt cool")
-            input("press key to continue btw you are really rude")
         else:
             print("Invalid digit, please put a number from 1 - 4.")
-            input("Press any key to continue ")
+            input("Input any key to continue!")
             print()
 
 if __name__ == "__main__":
