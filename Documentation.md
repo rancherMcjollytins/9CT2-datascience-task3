@@ -32,3 +32,40 @@
 2. Security
 
     Data security is important during the storing of data and transmission of data. It is important that data storage is protected from malicious attacks and/or changes and invalid data from other parties. Transmission encryption is important to ensure data privacy is regulated.
+
+#### **Use-Cases**
+1.  Access
+
+    Actor: User
+
+    Goal: To gain access to data about the crime rates over 10 years in the Central Coast via a user interface.
+
+    Preconditions: The Dataset has been preloaded onto the system, and the system interface (python based) is accessible and executable.
+
+    Main Flow:
+    1. User runs the program and is     presented
+     with 4 input options on a text-based menu.
+    2.  User accesses different parts and functions based on their inputs, being able to access either:
+
+        1. The Raw Dataset
+        2. MatPlotLib Based Visualisations
+        3. Data Searching and/or Filtering
+    3. The program should output the correct response to the users input.
+
+    Post-Conditions: 
+    - User can interact with, visualise, search and view the data.
+    - Data is not lost or damaged throughout the process.
+---
+### Data Dictionary
+|Field|Datatype|Format for Display|Description|Example|Validation|
+|:---:|:------:|:----------------:|:---------:|:-----:|:--------:|
+|Murder|int|N|Rates of one of the major crimes on the central coast|7|Must be a whole number|
+|Non-Domestic Assault|int|NNNN|Rates of one of the major crimes on the central coast|7|Must be a whole number|
+|Breaking and Entering Dwelling|int|NNNN|Rates of one of the major crimes on the central coast|7|Must be a whole number|
+|Robbery|int|NNN|Rates of one of the major crimes on the central coast|7|Must be a whole number|
+|Attempted Murder|int|N|Rates of one of the major crimes on the central coast|7|Must be a whole number|
+|Sexual Assault|int|NN|Rates of one of the major crimes on the central coast|7|Must be a whole number|
+|Year|Object|XX..XX|Rates of one of the major crimes on the central coast|7|Must be a string with the format STARTING POINT|
+
+
+    
