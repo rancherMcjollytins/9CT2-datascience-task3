@@ -13,9 +13,11 @@ def display_rawdata():
     print(rawdata)
 
 def visualise_data():
+    print("=== Data Visualiser ===")
+    print()
     for i in crimelist:
         print(i)
-    print("Back")
+    print("Back\n")
     visChoice = input("Please Choose a crime to visualise (1-7): ").strip()
     if visChoice == "1":
         rawdata.plot(kind="line",x='Year',y=['Murder'], color=['red'],alpha=1,title='Central Coast Murder Rates Over Years')
@@ -30,10 +32,10 @@ def visualise_data():
         rawdata.plot(kind="line",x='Year',y=['Robbery'], color=['blue'],alpha=1,title='Central Coast Robbery Rates Over Years')
         plt.show()
     elif visChoice == "5":
-        rawdata.plot(kind="line",x='Year',y=['Attempted Murder'], color=['Green'],alpha=1,title='Central Coast Attempted Murder Rates Over Years')
+        rawdata.plot(kind="line",x='Year',y=['Attempted Murder'], color=['green'],alpha=1,title='Central Coast Attempted Murder Rates Over Years')
         plt.show()
     elif visChoice == "6":
-        rawdata.plot(kind="line",x='Year',y=['Sexual Assault'], color=['Yellow'],alpha=1,title='Central Coast Sexual Assault Rates Over Years')
+        rawdata.plot(kind="line",x='Year',y=['Sexual Assault'], color=['yellow'],alpha=1,title='Central Coast Sexual Assault Rates Over Years')
         plt.show()
     elif visChoice == "7":
         print("Going Back!")
@@ -48,11 +50,27 @@ def filter_data():
     print("3. Back")
     filterChoice = input("=== Please Choose something to filter (1-3) ===\n Choose here: ").strip()
     if filterChoice == "1":
-        print("choose crime")
-        print(crimelist)
+        print()
+        for i in crimelist:
+            print(f"Crime: {i}")
+        print()
+        crimeChoiceFiltering = int(input("Choose a crime to filter by (1-6): "))
+
+
+
+
     elif filterChoice == "2":
         pass
+
+
+
+
+
     elif filterChoice == "3":
         pass
+
+
+
+
     else:
         print("Please choose a number from 1 to 3!")
