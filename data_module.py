@@ -58,16 +58,21 @@ def filter_data(selectioncrime, selectiontimeframe):
         for i in crimelist:
             print(f"Crime: {i}")
         print()
-        crimeChoiceFiltering = int(input("Choose a crime to filter or search for (1-6): "))
-        #checks to make sure that your input is in the range of 1 - 6 and is not 0
-        if crimeChoiceFiltering <= len(crimelist) and crimeChoiceFiltering != 0:
-            #-1 from crime choice filtering because python uses a zero index (starts from zero), I forgot this until it didnt work right
-            selectioncrime = crimelist[crimeChoiceFiltering - 1]
-            print(rawdata[["Year",selectioncrime]])
-            input("Input any key to continue!")
-        else:
+        try:
+            crimeChoiceFiltering = int(input("Choose a crime to filter or search for (1-6): "))
+            #checks to make sure that your input is in the range of 1 - 6 and is not 0
+            
+            if crimeChoiceFiltering <= len(crimelist) and crimeChoiceFiltering != 0:
+                #-1 from crime choice filtering because python uses a zero index (starts from zero), I forgot this until it didnt work right
+                selectioncrime = crimelist[crimeChoiceFiltering - 1]
+                print(rawdata[["Year",selectioncrime]])
+                input("Input any key to continue!")
+            else:
+                print("Invalid choice!")
+                input("Input any key to continue!")
+        except:
             print("Invalid choice!")
-            input("Input any key to continue!")
+            return False
 
 
 
@@ -75,17 +80,20 @@ def filter_data(selectioncrime, selectiontimeframe):
     elif filterChoice == "2":
         for timespan in rawdata["Year"]:
             print(f"[{timespan}]")
-        yearChoiceFiltering = int(input("\nPlease choose a year to filter by (1 - 10): "))
-        if yearChoiceFiltering != 0 and yearChoiceFiltering <= len(rawdata["Year"]):
-            #though done a bit differently, once again, yearchoicefiltering is your input, the selection
-            # is simply the position of the int you inputted in the yearchoicefiltering - 1 for python reasons.
-            selectiontimeframe = rawdata.iloc[yearChoiceFiltering - 1,:]
-            print(f"\n{selectiontimeframe}")
-            input("Input any key to continue!")
-        else:
+        try:
+            yearChoiceFiltering = int(input("\nPlease choose a year to filter by (1 - 10): "))
+            if yearChoiceFiltering != 0 and yearChoiceFiltering <= len(rawdata["Year"]):
+                #though done a bit differently, once again, yearchoicefiltering is your input, the selection
+                # is simply the position of the int you inputted in the yearchoicefiltering - 1 for python reasons.
+                selectiontimeframe = rawdata.iloc[yearChoiceFiltering - 1,:]
+                print(f"\n{selectiontimeframe}")
+                input("Input any key to continue!")
+            else:
+                print("Invalid choice!")
+                input("Input any key to continue!")
+        except:
             print("Invalid choice!")
-            input("Input any key to continue!")
-
+            return False
 
 
 

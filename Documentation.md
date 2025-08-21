@@ -9,7 +9,7 @@
 ### Research and Findings
 I acquired my dataset from the BOCSAR (NSW Bureau of Crime Statistics and Research), where I acquired a Central Coast dataset that I transferred onto a separate, smaller CSV file to read into pandas.
 
-My dataset has benefits and also negative attributes that add to, or lessen the validity of the dataset. The data has been taken from a reputable and official government source, and does not contain empty fields (as it is a small dataset). In contrast, the dataset is small, which contributes less to the overall ability of the data to recognise deeper hidden trends and pattern. Additionally, the dataset mostly doesn't factor in the possibility of crimes being domestic or non-domestic, which could explain some results (like an influx of crime during the pandemic, likely domestic crime as a result of the lockdowns). In a professional setting, data like this could result in focus on crime control during periods of low social interaction, which would be a wrongful decision as non-domestic crime would usually occur more outside of isolation.
+My dataset has benefits and also negative attributes that add to, or lessen the validity of the dataset. The data has been taken from a reputable and official government source, and does not contain empty fields (as it is a small dataset). In contrast, the dataset is small, which contributes less to the overall ability of the data to recognise deeper hidden trends and pattern. Additionally, the dataset mostly doesn't factor in the possibility of crimes being domestic or non-domestic, which could explain some results (like an influx of crime during the pandemic, likely domestic crime as a result of the lockdowns). Data like this could result in focus on crime control during periods of low social interaction, which would be a wrongful decision as non-domestic crime would usually occur more outside of isolation.
 
 ---
 ### Functional and Non-Functional Requirements
@@ -44,7 +44,7 @@ My dataset has benefits and also negative attributes that add to, or lessen the 
     Data should be easily accessible for users, in a raw state, visual state and in a search-specific state. This can be achieved through data visualisation using matplotlib and pandas, and the implementation of a search function using pandas features like iloc, loc and more.
 
 #### **Use-Cases**
-1.  Access
+1.  **Access**
 
     Actor: User
 
@@ -87,3 +87,19 @@ My user interface is a bit messy in some areas, which could lead to confusion fo
 
 In terms of my project, I managed my time in a less than ideal way, as a majority of my task was done in the last periods of time (as seen by my commits). I did ask for help from teachers and peers, as well as other sources online for help with optimizing my code, allowing me to remove some hardcoded areas that would have taken a lot of resources/area and made the code messy.
     
+### Peer Evaluation
+Plus 
+
+Large number of graphs for evaluation.
+
+Well set out UI
+
+Minus
+
+Great numbers of bugs in code
+
+Dataset can't be compared easily
+
+Implication 
+
+Allover a well set out project with potential, more time avaialable would allow for greater of features to be added.
