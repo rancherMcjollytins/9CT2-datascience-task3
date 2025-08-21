@@ -2,7 +2,7 @@
 ### 9CT2 Task 2 - Central Coast Violent and non-violent crime rates + links.
 ---
 ### Hypothesis
-    Violent crime, as well as non-violent crime (burglary, etc.) occurs most in areas with high populations, as well as cityscape areas with a high magnitude of abandoned urban infrastructure like Gosford. Additionally, high delinquency raises crime rates and contibutes to the overall crime rates in the Central Coast.
+    Violent crime, as well as non-violent crime (burglary, etc.) occurred most over the past 10 years in times of high social interaction. There was an reduction of crime during times of lower public interaction and increased screen time.
 
 ---
 
@@ -32,6 +32,10 @@
 2. Security
 
     Data security is important during the storing of data and transmission of data. It is important that data storage is protected from malicious attacks and/or changes and invalid data from other parties. Transmission encryption is important to ensure data privacy is regulated.
+
+3. Accessibility
+
+    Data should be easily accessible for users, in a raw state, visual state and in a search-specific state. This can be achieved through data visualisation using matplotlib and pandas, and the implementation of a search function using pandas features like iloc, loc and more.
 
 #### **Use-Cases**
 1.  Access
@@ -65,7 +69,15 @@
 |Robbery|int|NNN|Rates of one of the major crimes on the central coast|7|Must be a whole number|
 |Attempted Murder|int|N|Rates of one of the major crimes on the central coast|7|Must be a whole number|
 |Sexual Assault|int|NN|Rates of one of the major crimes on the central coast|7|Must be a whole number|
-|Year|Object|XX..XX|Rates of one of the major crimes on the central coast|7|Must be a string with the format STARTING POINT|
+|Year|Object|XX..XX - XX..XX|Rates of one of the major crimes on the central coast|April 2019 - March 2020|Must be a string with the format [STARTING POINT - END POINT]|
 
+---
+### SEE-I Paragraph
+Although my program had a variety of inconsistencies, the main functions of the program were operating correctly for the most part. The dataset I used was a small sample from a larger dataset, which made it easier to manipulate, but gave less concise findings. Based on my visualisations and raw data, most crime (except for non-domestic crimes) were at their highest during the pandemic, which would suggest an influx of aggressive and violent crime within lockdown areas, and quarantine, likely suggesting that domestic crime was the major factor for the rise in crime. While my hypothesis stated that violent and major crime was at it's highest during times of social interaction, the trend throughout most of the data suggests that the pandemic saw a rise in crime. This is likely only seen as the data is given out of context, without taking into consideration domestic and non-domestic crime, where domestic crime would take place a lot more often during times of isolation.
 
+---
+### Evaluation
+My user interface is a bit messy in some areas, which could lead to confusion for users. The dataset I used is small, which makes it less viable for finding deep trends and recognising patterns. Additionally, the dataset is somewhat biased as it does not factor in domestic and non-domestic crime for a majority of the data. Many of my requirement outlines were achieved in the program, like visual clarity with my graphs (as a result of matplotlib) and data searching, but some were also not, like data cleansing (as the dataset already had full values in all cells) and data efficiency (as the program can sometimes be a bit slow).
+
+In terms of my project, I managed my time in a less than ideal way, as a majority of my task was done in the last periods of time (as seen by my commits). I did ask for help from teachers and peers, as well as other sources online for help with optimizing my code, allowing me to remove some hardcoded areas that would have taken a lot of resources/area and made the code messy.
     
