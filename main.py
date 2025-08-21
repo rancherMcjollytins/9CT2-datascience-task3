@@ -14,7 +14,7 @@ def main_menu():
         if MenuInput == "1":
             display_rawdata()
             print()
-            time.sleep(1)
+            time.sleep(1)        
         elif MenuInput == "2":
             visualise_data()
             print()
