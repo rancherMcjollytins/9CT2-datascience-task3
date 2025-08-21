@@ -72,7 +72,6 @@ def filter_data(selectioncrime, selectiontimeframe):
 
 
             
-
     elif filterChoice == "2":
         for timespan in rawdata["Year"]:
             print(f"[{timespan}]")
